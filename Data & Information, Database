@@ -1,4 +1,4 @@
-● Discussion On Data and Information -
+# Discussion On Data and Information -
 Database = Data  + Base [Base of Data]
 Data ⇾ Data is the plural form of Dataum (Latin Word)
 17, 15, Fahad, Mahee ⇾ These are the data. So data is the unorganized and meaningless fact/incident. 
@@ -6,14 +6,14 @@ Data ⇾ Data is the plural form of Dataum (Latin Word)
 ⏵If the data are processed ⇾ Information. 
   Example: Fahad is 17 Years Old. Mahee is 15 Years Old.
 
-                                ⏵Difference between Data and Information
+                                # Difference between Data and Information
                 Data                                                         Information
 1. Unorganized and meaningless something is Data        1. Processed and meaningfull data is Information
 2. Data is the partial concept on anything              2. Information is the complete concept on anything
 3. Data can't be used directly                          3. Information can be used directly
 4. Example: 14, 15, Fahad, Mahee                        4. Fahad is 14 years old. Mahee is 15 years old
 
-● Database ⇾ 
+# Database ⇾ 
 ⏵ A database is an organized collection of structured information, or data, typically stored electronically 
 in a computer system.
 ⏵ A database is a collection of data that is organized, which is also called structured data. It can be 
