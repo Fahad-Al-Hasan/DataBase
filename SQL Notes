@@ -1,4 +1,46 @@
 SQL Statements
 1. DML [Data Manipulation] : Select, Insert, Update, Delete
 2. DDL [Data Definition language] : Create, Alter, Drop
-  
+
+What is XAMPP - XAMPP is a free and open source cross-platform local web server developed by 
+Apache friends. 
+⏵ XAMPP stands for Cross Platform (x), Apache (A), MySQL (M), PHP (P) and Perl (P).
+
+⏵ SQL Commands - Basic
+SHOW DATABASES [This will show all the databases created in the XAMPP]
+CREATE DATABASE College; [A Database namely College will be created]
+DROP DATABASE crime_management; [crime_management Database will be deleted]
+
+Data Types
+Numeric data type
+1. SMALLINT  2. INT  3. BIGINT   4. FLOAT  5. DOUBLE (M, D)  6. Decimal (M,D)
+                                              M = Size  D = How many places after decimal
+Character Type Data: 
+1. CHAR(m)  2. VARCHAR (m)  3. TEXT
+⏵Difference between CHAR and VARCHAR
+Let's we give the size = 20 but our name length = 5. CHAR will take the space for 20 but
+VARCHAR will take only for 5 though the size was declared = 20.
+
+Date and Time Data Type:
+1. YEAR (YYYY)    2. DATE (YYYY-MM-DD)    3. TIME(HH:MM:SS)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
