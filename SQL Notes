@@ -10,7 +10,7 @@ Apache friends.
 SHOW DATABASES [This will show all the databases created in the XAMPP]
 CREATE DATABASE College; [A Database namely College will be created]
 DROP DATABASE crime_management; [crime_management Database will be deleted]
-
+_________________________________________________________________________________________
 Data Types
 Numeric data type
 1. SMALLINT  2. INT  3. BIGINT   4. FLOAT  5. DOUBLE (M, D)  6. Decimal (M,D)
@@ -24,9 +24,162 @@ VARCHAR will take only for 5 though the size was declared = 20.
 Date and Time Data Type:
 1. YEAR (YYYY)    2. DATE (YYYY-MM-DD)    3. TIME(HH:MM:SS)
 
+Some other Data Type
+1. BLOB [Binary Large Object]  2. Logical
+_________________________________________________________________________________________
+CREATE TABLE table_name (
+column_name1 data_type (size),
+column_name2 data_type (size),
+.....
+column_nameN data_type (size),
+);
+
+Table
+ROLL   |     Name    |    Gender    |    Age    |    GPA     |   City
+_______________________________________________________________________
+101    |    Rahim    |    Male      |    18     |   3.44     |   Sylhet
+102    |    Hasina   |    Female    |    17     |   4.50     |   Dhaka
+
+CREATE TABLE student (
+	Roll int,
+    Name VARCHAR(15),
+    Gender VARCHAR(10),
+    Age int,
+    GPA Double(3, 2),
+    City VARCHAR (10),
+    PRIMARY KEY(Roll)
+);
+
+Ranming of Tables ________________
+RENAME TABLE old_name TO new_name;
+
+Droping of Tables ________________
+DROP TABLE changednamestudents;
+_________________________________________________________________________________________
+Inserting record on the table - 
+Command for Data Insert - INSERT INTO
+
+Syntax - 
+INSERT INTO table_name (column1, column2, column3, ...... columnN)
+VALUES (value1, value2, value3, .... valueN);
 
 
+INSERT INTO student
+VALUES 	(104, 'Sakib', 19, 'Male', 3.55, 'Dhaka'), 
+		(103, 'Rahima', 19, 'Female', 3.55, 'Sylhet')
+;
 
+INSERT INTO student
+VALUES 	(106, 'Sakib', 'Male', 19, 3.55, 'Dhaka')
+;
+
+INSERT INTO student (Roll, Name, Gender, Age, GPA, City)
+VALUES 	(109, 'Hasib', 'Male', 19, 3.65, 'Ctg')
+;
+
+INSERT INTO student (Roll, Name, Gender, Age, GPA, City)
+VALUES 	(110, 'Shakira', 'Female', 25, 3.10, 'DHK'), 
+		(111, 'Hasina', 'Female', 76, 2.65, 'Gopalganj')
+;
+_________________________________________________________________________________________
+SELECT Statement [Part of DML (Data Manipulation)] [Selects the columns from the table]
+Syntax - 
+SELECT column_list FROM table_name;
+
+SELECT name 
+FROM student; [Only shows the name column]
+
+SELECT name, roll, city 
+FROM student; [Shows the name, roll, city column]
+
+SELECT * 
+FROM student; [All the columns will be showed]
+_________________________________________________________________________________________
+DISCTINCT & LIMIT Keyword 
+
+SELECT DISTINCT city 
+FROM student; [The distinct values will be showed]
+If multiple students from Dhaka then dhaka will only be showed for once. Duplicate values will be removed
+
+SELECT * 
+FROM student
+LIMIT 3; [Only 3 row will be displayed]
+
+SELECT * 
+FROM student
+LIMIT 2, 3; [First 2 rows will be ignored, and then next 3 rows will be showed]
+_________________________________________________________________________________________
+ORDER BY [Sorting in ascedning or descending]
+
+SELECT Name, Roll, City 
+FROM student
+ORDER BY roll; [Name, Roll, City will be displayed in ascending order]
+
+SELECT Name, Roll, City 
+FROM student
+ORDER BY roll DESC; [Name, Roll, City will be displayed in descending order]
+
+SELECT Name, Roll, City 
+FROM student
+ORDER BY Name, Roll; 
+[Name, Roll, City will be displayed in ascending order based on Name, Roll]
+_________________________________________________________________________________________
+Arithmetic Operator (+, -, *, /, %)
+Comparison Operator (=, !=, >, >=, <, <=, BETWEEN)
+Logical Operator (AND, OR, NOT)
+
+SELECT (5+2)/7*8;
+_________________________________________________________________________________________
+WHERE Clause
+
+SELECT Column 
+FROM Table_Name
+WHERE Condition
+
+SELECT City
+FROM student WHERE gender = 'Female';
+[Only Female student's city will be showed]
+
+SELECT DISTINCT City
+FROM student WHERE gender = 'Female';
+
+SELECT DISTINCT City
+FROM student WHERE gender = 'Female'
+ORDER BY roll DESC
+;
+
+SELECT * 
+FROM student WHERE age = 18;
+
+SELECT * 
+FROM student WHERE age >= 18
+ORDER BY age DESC
+;
+_________________________________________________________________________________________
+!= and BETWEEN Operator
+
+SELECT roll, name, gpa 
+FROM student WHERE roll BETWEEN 102 and 105
+[name and gpa for students whoose roll is between 102 and 105]
+
+SELECT roll, name, gpa 
+FROM student WHERE roll != 102;
+[name and gpa for students whoose roll is not 102]
+_________________________________________________________________________________________
+OR Operator
+
+SELECT * 
+FROM student
+where gender = 'Female' OR gpa >= 3.00;
+[Students who are female or gpa greater than 3.00]
+
+SELECT name, city
+FROM student where gender = 'male' AND roll > 106;
+[Name and city for students who are male and roll greater than 106]
+
+SELECT name, city 
+FROM student WHERE city = 'Dhaka' or city = 'dhk' 
+	and (gender = 'male' OR gender = 'Female');
 
 
 
